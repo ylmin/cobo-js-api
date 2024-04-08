@@ -84,7 +84,7 @@ console.log(keyPair["privKey"]);
 console.log(keyPair["pubKey"]);
 
 const signer = new LocalSigner(keyPair["privKey"]);
-const client = new Client(keyPair["privKey"], DEV, true)
+const client = new Client(signer, DEV, true)
 
 const res =  client.getAccountInfo();
 console.log(res)
